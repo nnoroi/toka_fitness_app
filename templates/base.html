@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}ToKa Connect{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+
+    <header>
+        <a class="brand" href="{{ url_for('index') }}">ToKa Connect</a>
+        <nav aria-label="Main navigation">
+            <a href="{{ url_for('index') }}">Home</a>
+        </nav>
+    </header>
+
+    <main id="main">
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        <p>© ToKa Fitness</p>
+    </footer>
+</body>
+</html>
